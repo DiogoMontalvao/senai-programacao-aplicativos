@@ -6,6 +6,7 @@ public class Acessorio {
 
     public Acessorio() {
     }
+
     public Acessorio(String tipo, String marca, String material, Double preco) {
         setTipo(tipo);
         setMarca(marca);
@@ -13,9 +14,21 @@ public class Acessorio {
         setPreco(preco);
     }
 
+    public String exibirDetalhes() {
+        return String.format(
+                """
+                        Informações do acessório:
+                        Tipo: %s
+                        Marca: %s
+                        Material: %s
+                        Preco: R$ %.2f""",
+                this.tipo, this.marca, this.material, this.preco);
+    }
+
     public String getTipo() {
         return this.tipo;
     }
+
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
@@ -23,6 +36,7 @@ public class Acessorio {
     public String getMarca() {
         return this.marca;
     }
+
     public void setMarca(String marca) {
         this.marca = marca;
     }
@@ -30,6 +44,7 @@ public class Acessorio {
     public String getMaterial() {
         return this.material;
     }
+
     public void setMaterial(String material) {
         this.material = material;
     }
@@ -37,6 +52,7 @@ public class Acessorio {
     public Double getPreco() {
         return this.preco;
     }
+
     public void setPreco(Double preco) {
         if (preco <= 0) {
             System.out.println("Preço inválido.");
