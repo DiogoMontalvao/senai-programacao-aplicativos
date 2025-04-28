@@ -31,7 +31,7 @@ public class Time {
         jogador.setSituacaoEscalacao(situacaoEscalacao);
         jogadoresEscalados.add(jogador);
 
-        return false;
+        return true;
     }
 
     public void removerJogadorEscalacao(String nome) {
@@ -50,23 +50,22 @@ public class Time {
         }
     }
 
-    private boolean limiteAtingido(SituacaoEscalacaoEnum situacaoEscalacao) {
-        int quantidade = 0;
-
-        for (Jogador jogador : jogadoresEscalados) {
-            if (jogador.getSituacaoEscalacao() == situacaoEscalacao)
-                quantidade++;
-        }
-
-        return quantidade == situacaoEscalacao.getQuantidadeMax();
-    }
-
     private Jogador encontrarJogador(String nome) {
         for (Jogador jogador : jogadoresContratados) {
             if (nome.equalsIgnoreCase(jogador.getNome())) return jogador;
         }
 
         return null;
+    }
+
+    private boolean limiteAtingido(SituacaoEscalacaoEnum situacaoEscalacao) {
+        int quantidade = 0;
+
+        for (Jogador jogador : jogadoresEscalados) {
+            if (jogador.getSituacaoEscalacao() == situacaoEscalacao) quantidade++;
+        }
+
+        return quantidade == situacaoEscalacao.getQuantidadeMax();
     }
 
     private boolean jogadorEscalado(Jogador jogador) {
