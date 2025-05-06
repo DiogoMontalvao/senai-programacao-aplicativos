@@ -6,8 +6,8 @@ public class Time {
     private String nome;
     private String nomeTecnico;
 
-    private ArrayList<Jogador> jogadoresContratados = new ArrayList<>();
-    private ArrayList<Jogador> jogadoresEscalados = new ArrayList<>();
+    ArrayList<Jogador> jogadoresContratados = new ArrayList<>();
+    ArrayList<Jogador> jogadoresEscalados = new ArrayList<>();
 
     public Time() {
     }

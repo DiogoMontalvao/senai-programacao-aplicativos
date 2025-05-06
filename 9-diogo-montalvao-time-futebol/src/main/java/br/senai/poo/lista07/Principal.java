@@ -12,6 +12,7 @@ public class Principal {
         bahia.contratarJogador("Quatro", "4");
         bahia.contratarJogador("Cinco", "5");
         bahia.contratarJogador("Seis", "6");
+        bahia.obterEscalacao();
 
         bahia.escalarJogador("Um", SituacaoEscalacaoEnum.RESERVA);
         bahia.escalarJogador("Um", SituacaoEscalacaoEnum.RESERVA);
