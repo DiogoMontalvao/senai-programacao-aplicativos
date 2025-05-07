@@ -1,13 +1,12 @@
 package br.senai.poo.lista07;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-public class TimeTeste {
+public class TesteTime {
     private Time time;
     private final int JOGADORES_CONTRATADOS = 30;
 
@@ -57,11 +56,12 @@ public class TimeTeste {
 
     @Test
     public void testeRemoverJogador() {
+        time.escalarJogador("4", SituacaoEscalacaoEnum.TITULAR);
         time.removerJogadorEscalacao("4");
 
         boolean jogadorEncontrado = false;
         for (Jogador jogador : time.jogadoresEscalados) {
-            if (jogador.getNome().equals("Robertinho")) jogadorEncontrado = true;
+            if (jogador.getNome().equals("4")) jogadorEncontrado = true;
         }
 
         assertFalse(jogadorEncontrado);
