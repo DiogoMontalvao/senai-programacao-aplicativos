@@ -15,9 +15,11 @@ public class CadastroEstudantes {
         return null;
     }
 
-    public void listarEstudantes() {
-        for (Estudante estudante : cadastroEstudantes) {
-            System.out.println(estudante.exibirInformacoes());
-        }
+    public ArrayList<Estudante> listarEstudantes() {
+        return cadastroEstudantes;
+    }
+
+    public int getQuantidadeCadastroEstudantes() {
+        return cadastroEstudantes.size();
     }
 }

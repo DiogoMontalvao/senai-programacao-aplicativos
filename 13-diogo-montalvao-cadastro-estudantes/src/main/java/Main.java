@@ -5,14 +5,16 @@ public class Main {
         Estudante naara = new Estudante("Naara", 36);
         Estudante fernanda = new Estudante("Fernanda", 36);
 
-        CadastroEstudantes cadastro = new CadastroEstudantes();
-        cadastro.adicionarEstudante(vito);
-        cadastro.adicionarEstudante(naara);
-        cadastro.adicionarEstudante(fernanda);
+        CadastroEstudantes estudantes = new CadastroEstudantes();
+        estudantes.adicionarEstudante(vito);
+        estudantes.adicionarEstudante(naara);
+        estudantes.adicionarEstudante(fernanda);
 
-        cadastro.listarEstudantes();
+        for (Estudante estudante : estudantes.listarEstudantes()) {
+            System.out.println(estudante.exibirInformacoes());
+        }
 
-        System.out.println(cadastro.consultarPorNome("Diogo"));
-        System.out.println(cadastro.consultarPorNome("Vito"));
+        System.out.println(estudantes.consultarPorNome("Diogo"));
+        System.out.println(estudantes.consultarPorNome("Vito"));
     }
 }
