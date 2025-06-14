@@ -10,6 +10,7 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String nome;
 
     public Produto() {
@@ -18,6 +19,14 @@ public class Produto {
 
     public Produto(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 
     public Integer getId() {
